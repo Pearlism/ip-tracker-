@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bb111100; /* Light gray background */
+    font-family: Arial, sans-serif;
+}
+
+.loading-screen {
+    text-align: center;
+    max-width: 90%; /* Ensures that the content doesn't exceed screen width */
+    margin: auto; /* Centers the content horizontally */
+}
+
+.logo {
+    width: 250px; /* Increased logo size */
+    margin-bottom: 20px;
+    filter: brightness(1) invert(0); /* Makes the logo white to blend with background */
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.dot {
+    font-size: 60px; /* Increased dot size */
+    color: #ff8800; /* Change color to purple */
+    animation: bounce 1s infinite;
+}
+
+.dot:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.loading-text {
+    font-size: 24px; /* Increased text size */
+    color: #ff9100; /* Change text color to match dots */
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    z-index: -1;
+  }
